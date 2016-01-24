@@ -1,0 +1,60 @@
+<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+  background-color: black;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.tangerine {
+  font-family: 'Tangerine', cursive;
+  font-size: 400%;
+  color: white;
+}
+
+.msg {
+  color: red;
+}
+
+.hide {
+  color: black;
+}
+
+a {
+  color: white;
+}
+</style>
+
+<script>
+function check() {
+  if (!document.getElementById("hell").checked) {
+    document.getElementById("err").innerHTML = "WTF?";
+    return false;
+  }
+  return true;
+}
+</script>
+
+<div class="container">
+  <div class="tangerine">
+    Will you marry Da Bing?<br/>
+    <input id="hell" type="radio" name="q1"/> hell yeah!<br/>
+    <input id="sure" type="radio" name="q1"/> sure<br/>
+    <br/>
+    <a href="end.html" onclick="return check();">answer</a>
+    &nbsp;&nbsp;
+    <span id="err" class="msg"></span>
+  </div>
+</div>
+

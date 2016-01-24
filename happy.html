@@ -1,0 +1,80 @@
+<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+  background-color: black;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.tangerine {
+  font-family: 'Tangerine', cursive;
+  font-size: 200%;
+  color: white;
+}
+
+.msg {
+  color: red;
+}
+
+.hide {
+  color: black;
+}
+
+a {
+  color: white;
+}
+</style>
+
+<script>
+function check() {
+  var n1 = document.getElementById("n1").value;
+  var n2 = document.getElementById("n2").value;
+  var n3 = document.getElementById("n3").value;
+  if (isNaN(n1)
+      || n1 != 5
+      || isNaN(n2)
+      || n2 != 13
+      || isNaN(n3)
+      || n3 != 21) {
+    document.getElementById("err").innerHTML = "Wrong passcode!";
+    return false;
+  }
+  return true;
+}
+</script>
+
+<img src="bufinal.jpg" alt="Princess Bu" align="right"/>
+<div class="container">
+  <div class="tangerine">
+    Bu arrived at the castle<br/>
+    but the gate is locked<br/>
+    to enter<br/>
+    she must provide the correct sequence of passcodes<br/>
+    <br/>
+    <span class="hide">1</span>,&nbsp;
+    <span class="hide">1</span>,&nbsp;
+    <span class="hide">2</span>,&nbsp;
+    <span class="hide">3</span>,&nbsp;
+    <input id="n1" type="text" size="2" maxlength="2"/>,&nbsp;
+    <span class="hide">8</span>,&nbsp;
+    <input id="n2" type="text" size="2" maxlength="2"/>,&nbsp;
+    <input id="n3" type="text" size="2" maxlength="2"/>,&nbsp;
+    <span class="hide">34</span>
+    &nbsp;&nbsp;
+    <a href="birthday.html" onclick="return check();">open</a>
+    &nbsp;&nbsp;
+    <span id="err" class="msg"></span>
+  </div>
+</div>
+

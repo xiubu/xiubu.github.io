@@ -1,0 +1,65 @@
+<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+  background-image: url(outside.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.tangerine {
+  font-family: 'Tangerine', cursive;
+  font-size: 200%;
+  color: white;
+}
+
+.typed-cursor {
+    opacity: 0;
+}
+
+a {
+  color: white;
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="typed.js-master/js/typed.js"></script>
+<script>
+$(function(){
+    $(".tangerine").typed({
+        strings: ["once upon a time, king Da Bing collected great treasure<br/>"
+                  + "he hid it away in a castle<br/>"
+                  + "in the highest room<br/>"
+                  + "of the tallest tower<br/>"
+                  + "<br/>"
+                  + "princess Bu set off on a journey<br/>"
+                  + "to bring the treasure home<br/>"
+                  + "awaiting her highness<br/>"
+                  + "are myriads of obstacles<br/>"
+                  + "<br/>"
+                  + "<a href='happy.html'>hit the road</a>"],
+        typeSpeed: 50,
+        backDelay: 500,
+        loop: false,
+        loopCount: false
+    });
+});
+</script>
+
+<div class="container">
+  <div class="tangerine">
+  </div>
+</div>
+

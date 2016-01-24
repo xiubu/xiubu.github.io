@@ -1,0 +1,90 @@
+<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+  background-color: black;
+}
+
+.container {
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.tangerine {
+  font-family: 'Tangerine', cursive;
+  font-size: 200%;
+  color: white;
+}
+
+.msg {
+  color: red;
+}
+
+.hide {
+  color: black;
+}
+
+a {
+  color: white;
+}
+</style>
+
+<script>
+function check() {
+  if (!document.getElementById("3").checked
+      || !document.getElementById("176").checked
+      || !document.getElementById("none").checked) {
+    document.getElementById("err").innerHTML = "Wrong answer!";
+    return false;
+  }
+  return true;
+}
+</script>
+
+<img src="catsfinal.jpg" alt="MEATBALL, FISHBALL"/>
+<div class="container">
+  <div class="tangerine">
+    behold the monsters named after meat and fish!<br/>
+    do not be fooled<br/>
+    they have the strongest claws<br/>
+    and sharpest teeth<br/>
+    <br/>
+    these monsters can be calmed<br/>
+    only by knowledge a real Bu would know<br/>
+    <br/>
+    be careful with the questions below<br/>
+    one mistake<br/>
+    you will be in deep trouble<br/>
+    <br/>
+    <hr/>
+    1. how old is Bu?<br/>
+    <input id="3" type="radio" name="q1"/> 3<br/>
+    <input id="13" type="radio" name="q1"/> 13<br/>
+    <input id="23" type="radio" name="q1"/> 23<br/>
+    <input id="33" type="radio" name="q1"/> 33<br/>
+    <br/>
+    2. what is Da Bing's height?<br/>
+    <input id="158" type="radio" name="q2"/> 158<br/>
+    <input id="160" type="radio" name="q2"/> 160<br/>
+    <input id="174" type="radio" name="q2"/> 174<br/>
+    <input id="176" type="radio" name="q2"/> 176<br/>
+    <br/>
+    3. what below is Bu NOT allowed to watch?<br/>
+    <input id="ponyo" type="radio" name="q3"/> ponyo<br/>
+    <input id="panda" type="radio" name="q3"/> kung fu panda 3<br/>
+    <input id="porn" type="radio" name="q3"/> all videos on pornhub<br/>
+    <input id="none" type="radio" name="q3"/> none of the above<br/>
+    <br/>
+    <a href="da.html" onclick="return check();">done</a>
+    &nbsp;&nbsp;
+    <span id="err" class="msg"></span>
+  </div>
+</div>
+

@@ -1,0 +1,70 @@
+<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+  background-color: black;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.tangerine {
+  font-family: 'Tangerine', cursive;
+  font-size: 200%;
+  color: white;
+}
+
+.msg {
+  color: red;
+}
+
+.hide {
+  color: black;
+}
+
+a {
+  color: white;
+}
+</style>
+
+<script>
+function check() {
+  var n1 = document.getElementById("n1").value;
+  var n2 = document.getElementById("n2").value;
+  if (n1.toUpperCase() == "ROLL"
+      && n2.toUpperCase() == "OVER") {
+    return true;
+  }
+  document.getElementById("err").innerHTML = "Wrong phrase!";
+  return false;
+}
+</script>
+
+<img src="d1final.jpg" alt="DUSTY"/>
+<div class="container">
+  <div class="tangerine">
+    the name is DUSTY!<br/>
+    greatest guard dog with no mercy<br/>
+    your only chance lies in<br/>
+    diverting him with his favorite treat<br/>
+    and say the two magic words<br/>
+    with four letters each<br/>
+    <br/>
+    <input id="n1" type="text" size="4" maxlength="4"/>&nbsp;
+    <input id="n2" type="text" size="4" maxlength="4"/>
+    &nbsp;&nbsp;
+    <a href="love.html" onclick="return check();">say it</a>
+    &nbsp;&nbsp;
+    <span id="err" class="msg"></span>
+  </div>
+</div>
+
