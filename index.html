@@ -1,6 +1,8 @@
 <link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Nova+Mono' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
 
 <style>
@@ -19,6 +21,18 @@ body {
   transform: translateX(-50%) translateY(-50%);
 }
 
+.mono {
+  font-family: 'Ubuntu Mono';
+  font-size: 100%;
+  color: white;
+}
+
+.nova {
+  font-family: 'Nova Mono';
+  font-size: 100%;
+  color: white;
+}
+
 .tangerine {
   font-family: 'Tangerine', cursive;
   font-size: 200%;
@@ -30,19 +44,44 @@ a {
 }
 </style>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+var text = "                                                        <br/> " +
+           "once upon a time, king Da Bing collected great treasure <br/> " +
+           "he hid it away in a castle <br/> " +
+           "in the highest room <br/> " +
+           "of the tallest tower <br/> " +
+           " <br/> " +
+           "princess Bu set off on a journey <br/> " +
+           "to bring the treasure home <br/> " +
+           "awaiting her highness <br/> " +
+           "are myriads of obstacles";
+var words = text.split(" ");
+words.push("<br/><br/><a href=\"happy.html\">hit the road</a>");
+
+var html = "";
+var i = 0;
+while (i < words.length) {
+  html += "<span>" + words[i];
+  var j = i + 1;
+  while (j < words.length && words[j] == "") {
+    html += "&nbsp;";
+    j++;
+  }
+  html += " </span>";
+  i = j;
+}
+
+$(function () {
+  $("#content").html(html).children().hide().each(
+      function(i) {
+          $(this).delay(i * 200).fadeIn(700);
+      });
+});
+</script>
+
 <div class="container">
-  <div class="tangerine">
-    once upon a time, king Da Bing collected great treasure<br/>
-    he hid it away in a castle<br/>
-    in the highest room<br/>
-    of the tallest tower<br/>
-    <br/>
-    princess Bu set off on a journey<br/>
-    to bring the treasure home<br/>
-    awaiting her highness<br/>
-    are myriads of obstacles<br/>
-    <br/>
-    <a href="happy.html">hit the road</a>
+  <div id="content" class="mono">
   </div>
 </div>
 

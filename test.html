@@ -35,31 +35,22 @@ a {
 </style>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="typed.js-master/js/typed.js"></script>
 <script>
-$(function(){
-    $(".tangerine").typed({
-        strings: ["once upon a time, king Da Bing collected great treasure<br/>"
-                  + "he hid it away in a castle<br/>"
-                  + "in the highest room<br/>"
-                  + "of the tallest tower<br/>"
-                  + "<br/>"
-                  + "princess Bu set off on a journey<br/>"
-                  + "to bring the treasure home<br/>"
-                  + "awaiting her highness<br/>"
-                  + "are myriads of obstacles<br/>"
-                  + "<br/>"
-                  + "<a href='happy.html'>hit the road</a>"],
-        typeSpeed: 50,
-        backDelay: 500,
-        loop: false,
-        loopCount: false
-    });
-});
+var showText = function (target, message, index, interval) {    
+  if (index < message.length) {
+    var a = (message[index] == '\n') ? "<br/>" : message[index];
+    $(target).append(a); 
+    setTimeout(function () { showText(target, message, index + 1, interval); }, interval); 
+  } 
+}
+    
+$(function () { 
+  showText("#msg", "Hello, World!\nHello", 0, 100);    
+}); 
 </script>
 
 <div class="container">
-  <div class="tangerine">
+  <div id="msg" class="tangerine">
   </div>
 </div>
 
